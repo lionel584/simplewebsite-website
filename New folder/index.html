@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Introduction</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      overflow: hidden;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Background Video */
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Make sure video covers the entire screen */
+      z-index: -1; /* Place the video behind the content */
+    }
+
+    /* Container for content */
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      z-index: 1; /* Ensure container is above the video */
+    }
+
+    h2 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a shadow to the text for better readability */
+    }
+
+    img {
+      border-radius: 50%;
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 5px solid #fff; /* White border around the image */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow around the image */
+    }
+
+    /* Styling for the boxes */
+    .box-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .box {
+      background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background for the box */
+      padding: 20px;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.2em;
+      color: white; /* Text color for contrast */
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      border: 2px solid #fff; /* Border to highlight the boxes */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Box shadow to lift the boxes */
+    }
+
+    .box:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: scale(1.1);
+    }
+
+    /* Text in boxes */
+    .box p {
+      margin: 0;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video autoplay muted loop>
+    <source src="https://www.desktophut.com/files/GnUrLq6BHUjHAg3_Resting-Lone-Samurai-4K_2_091304.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Content Container -->
+  <div class="container">
+    <img src="D:\OneDrive\Desktop\New folder/lionel.jpg" alt="Your Picture">
+    <h2>Hi, I'm Lionel Bendict T. Loquias</h2>
+	<h4>click the boxes to see more</h4>
+    
+    <!-- Box Container -->
+    <div class="box-container">
+      <div class="box" onclick="window.open('https://drive.google.com/file/d/1PlGAwUotFmsmNB-Lt9YW3Ez-h2chKNHv/view?usp=sharing', '_blank')">
+        <p>About</p>
+      </div>
+      <div class="box" onclick="window.open('https://drive.google.com/file/d/15A5zhiCx1Jl_XoJI2cfqWv4lensAAIg6/view?usp=sharing', '_blank')">
+        <p>Skills</p>
+      </div>
+      <div class="box" onclick="window.open('https://drive.google.com/file/d/16DaLfZeA1RqDX0Z9Ne_YbrpbTMYn4PUi/view?usp=sharing', '_blank')">
+        <p>Contact</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
